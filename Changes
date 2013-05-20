@@ -6,6 +6,10 @@ Home page:    <https://metacpan.org/release/Sub-Infix>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=Sub-Infix>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.002  2013-05-20
+
+ - (Packaging) test_requires Test::Fatal
+
 0.001  2013-05-13  # Initial release
 
 

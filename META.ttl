@@ -1,70 +1,65 @@
-@prefix cpan:  <http://purl.org/NET/cpan-uri/person/> .
+@prefix cpan: <http://purl.org/NET/cpan-uri/person/> .
 @prefix cpant: <http://purl.org/NET/cpan-uri/terms#> .
-@prefix dc:    <http://purl.org/dc/terms/> .
-@prefix dcs:   <http://ontologi.es/doap-changeset#> .
-@prefix dist:  <http://purl.org/NET/cpan-uri/dist/Sub-Infix/> .
-@prefix doap:  <http://usefulinc.com/ns/doap#> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-@prefix nfo:   <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbug: <http://ontologi.es/doap-bugs#> .
+@prefix dcs: <http://ontologi.es/doap-changeset#> .
+@prefix dist: <http://purl.org/NET/cpan-uri/dist/Sub-Infix/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-dist:project
-	a                 doap:Project;
-	doap:name         "Sub-Infix";
-	cpant:perl_version_from [
-		a nfo:FileDataObject;
-		a nfo:SourceCode;
-		rdfs:label "Sub::Infix";
-		nfo:fileName "lib/Sub/Infix.pm";
-		nfo:programmingLanguage "Perl";
-	];
-	cpant:readme_from [
-		a nfo:FileDataObject;
-		a nfo:SourceCode;
-		rdfs:label "Sub::Infix";
-		nfo:fileName "lib/Sub/Infix.pm";
-		nfo:programmingLanguage "Perl";
-	];
-	cpant:version_from [
-		a nfo:FileDataObject;
-		a nfo:SourceCode;
-		rdfs:label "Sub::Infix";
-		nfo:fileName "lib/Sub/Infix.pm";
-		nfo:programmingLanguage "Perl";
-	];
-	dc:contributor    cpan:tobyink;
-	doap:bug-database <http://rt.cpan.org/Dist/Display.html?Queue=Sub-Infix>;
-	doap:created      "2013-05-13"^^xsd:date;
-	doap:developer    cpan:tobyink;
-	doap:download-page <https://metacpan.org/release/Sub-Infix>;
-	doap:homepage     <https://metacpan.org/release/Sub-Infix>;
-	doap:license      <http://dev.perl.org/licenses/>;
-	doap:maintainer   cpan:tobyink;
-	doap:programming-language "Perl";
-	doap:release      dist:v_0-001;
-	doap:repository   [
-		a doap:GitRepository;
-		doap:browse <https://github.com/tobyink/p5-sub-infix>;
-	];
-	doap:shortdesc    "create a fake infix operator".
-
-dist:v_0-001
-	a                 doap:Version;
-	rdfs:label        "Initial release";
-	dc:identifier     "Sub-Infix-0.001"^^xsd:string;
-	dc:issued         "2013-05-13"^^xsd:date;
-	dcs:released-by   cpan:tobyink;
-	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Sub-Infix-0.001.tar.gz>;
-	doap:revision     "0.001"^^xsd:string.
-
-cpan:tobyink
-	a                 foaf:Person;
-	foaf:name         "Toby Inkster";
-	foaf:mbox         <mailto:tobyink@cpan.org>;
-	foaf:nick         "TOBYINK";
-	foaf:page         <https://metacpan.org/author/TOBYINK>.
-
-<http://dev.perl.org/licenses/>
-	dc:title          "the same terms as the perl 5 programming language system itself".
-
+_:r1369066057r0 a dcs:Packaging ;
+	rdfs:label "test_requires Test::Fatal" .
+_:r1369066057r1 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Sub/Infix.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "Sub::Infix" .
+_:r1369066057r2 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Sub/Infix.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "Sub::Infix" .
+_:r1369066057r3 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/Sub/Infix.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "Sub::Infix" .
+_:rb63A112CCC16711E2A42070BE8BDEE864r0 dcs:item _:r1369066057r0 .
+_:rb63A112CCC16711E2A42070BE8BDEE864r1 doap:browse <https://github.com/tobyink/p5-sub-infix> ;
+	a doap:GitRepository .
+<http://dev.perl.org/licenses/> <http://purl.org/dc/terms/title> "the same terms as the perl 5 programming language system itself" .
+dist:project cpant:perl_version_from _:r1369066057r1 ;
+	cpant:readme_from _:r1369066057r3 ;
+	cpant:test_requires "Test::Fatal"^^cpant:dsWithoutVersion ;
+	cpant:version_from _:r1369066057r2 ;
+	<http://purl.org/dc/terms/contributor> cpan:tobyink ;
+	doap:bug-database <http://rt.cpan.org/Dist/Display.html?Queue=Sub-Infix> ;
+	doap:created "2013-05-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	doap:developer cpan:tobyink ;
+	doap:download-page <https://metacpan.org/release/Sub-Infix> ;
+	doap:homepage <https://metacpan.org/release/Sub-Infix> ;
+	doap:license <http://dev.perl.org/licenses/> ;
+	doap:maintainer cpan:tobyink ;
+	doap:name "Sub-Infix" ;
+	doap:programming-language "Perl" ;
+	doap:release dist:v_0-001, dist:v_0-002 ;
+	doap:repository _:rb63A112CCC16711E2A42070BE8BDEE864r1 ;
+	doap:shortdesc "create a fake infix operator" ;
+	a doap:Project .
+dist:v_0-001 dcs:released-by cpan:tobyink ;
+	<http://purl.org/dc/terms/identifier> "Sub-Infix-0.001"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<http://purl.org/dc/terms/issued> "2013-05-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Sub-Infix-0.001.tar.gz> ;
+	doap:revision "0.001"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a doap:Version ;
+	rdfs:label "Initial release" .
+dist:v_0-002 dcs:changeset _:rb63A112CCC16711E2A42070BE8BDEE864r0 ;
+	dcs:released-by cpan:tobyink ;
+	<http://purl.org/dc/terms/identifier> "Sub-Infix-0.002"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<http://purl.org/dc/terms/issued> "2013-05-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/Sub-Infix-0.002.tar.gz> ;
+	doap:revision "0.002"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a doap:Version .
+cpan:tobyink a foaf:Person ;
+	foaf:mbox <mailto:tobyink@cpan.org> ;
+	foaf:name "Toby Inkster" ;
+	foaf:nick "TOBYINK" ;
+	foaf:page <https://metacpan.org/author/TOBYINK> .
