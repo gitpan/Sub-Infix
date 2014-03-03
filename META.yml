@@ -1,32 +1,39 @@
 ---
 abstract: 'create a fake infix operator'
 author:
-  - 'Toby Inkster <tobyink@cpan.org>'
+  - 'Toby Inkster (TOBYINK) <tobyink@cpan.org>'
 build_requires:
-  ExtUtils::MakeMaker: 6.59
   Test::Fatal: 0
+  Test::More: 0.96
 configure_requires:
-  ExtUtils::MakeMaker: 6.59
-distribution_type: module
+  ExtUtils::MakeMaker: 6.17
 dynamic_config: 0
-generated_by: 'Module::Install version 1.06'
+generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.014, CPAN::Meta::Converter version 2.120921'
 keywords: []
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-module_name: Sub::Infix
 name: Sub-Infix
 no_index:
   directory:
+    - eg
+    - examples
     - inc
     - t
     - xt
-requires:
-  perl: 5.8.1
+optional_features: {}
+provides:
+  Sub::Infix:
+    file: lib/Sub/Infix.pm
+    version: 0.003
+  Sub::Infix::PartialApplication:
+    file: lib/Sub/Infix.pm
+    version: 0
 resources:
+  X_identifier: http://purl.org/NET/cpan-uri/dist/Sub-Infix/project
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=Sub-Infix
   homepage: https://metacpan.org/release/Sub-Infix
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-sub-infix
-version: 0.002
+version: 0.003
