@@ -1,12 +1,12 @@
-package Sub::Infix;
-
-use 5.008001;
+use 5.006;
 use strict;
 use warnings;
 
+package Sub::Infix;
+
 BEGIN {
 	$Sub::Infix::AUTHORITY = 'cpan:TOBYINK';
-	$Sub::Infix::VERSION   = '0.003';
+	$Sub::Infix::VERSION   = '0.004';
 }
 
 use Exporter ();
@@ -22,8 +22,22 @@ sub infix (&)
 {
 	package Sub::Infix::PartialApplication;
 	
-	use Scalar::Util qw(blessed);
 	use Carp qw(croak);
+	
+	BEGIN {
+		eval { require Scalar::Util; }
+			? 'Scalar::Util'->import(qw/blessed/)
+			: eval(q{
+				require B;
+				sub blessed ($) {
+					return undef unless length(ref($_[0]));
+					my $b = B::svref_2object($_[0]);
+					return undef unless $b->isa('B::PVMG');
+					my $s = $b->SvSTASH;
+					return $s->isa('B::HV') ? $s->NAME : undef;
+				}
+			});
+	};
 	
 	use overload
 		q(|)   => sub { _apply($_[2] ? @_[1,0] : @_[0,1], "|") },
@@ -31,6 +45,9 @@ sub infix (&)
 		q(<<)  => sub { _apply($_[2] ? @_[1,0] : @_[0,1], "<<") },
 		q(>>)  => sub { _apply($_[2] ? @_[1,0] : @_[0,1], ">>") },
 		q(&{}) => sub { $_[0]->{code} },
+		q("")  => sub { !!1 },
+		q(0+)  => sub { !!1 },
+		q(bool)=> sub { !!1 },
 	;
 	
 	sub _apply
@@ -102,7 +119,7 @@ Sub::Infix creates fake infix operators using overloading. It doesn't
 use source filters, or L<Devel::Declare>, or any of that magic. (Though
 Devel::Declare isn't magic enough to define infix operators anyway; I
 know; I've tried.) It's pure Perl, has no non-core dependencies, and
-runs on Perl 5.8.
+runs on Perl 5.6.
 
 The price you pay for its simplicity is that you cannot define an
 operator that can be used like this:

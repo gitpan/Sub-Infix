@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.70.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,25 +14,25 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
-SHA1 cb3f5f84f4f5a900723d0a675a7b47b3d541ca1b COPYRIGHT
+SHA1 33317486c4fa2cf7fec85bf92ed38ac0f64233a0 CONTRIBUTING
+SHA1 ffd490b89a71ab941f76c946b245af0002987498 COPYRIGHT
 SHA1 6bd7b17d81be63d08d4efa6cb80106e72887842c CREDITS
-SHA1 e0e07f50f4a718b0a16ef9f2d7f0b0d7c956da4a Changes
+SHA1 b548b5683eb41a77305c3f170c99a0d45eaa4515 Changes
 SHA1 14f03eea77ec27caed88586627b1a7f9bd21b243 INSTALL
-SHA1 47870123f373f5185d6893cb98bf06a8a05510aa LICENSE
+SHA1 34f5e12514b91055de4b164a1f2327ef5c30ba53 LICENSE
 SHA1 2942c2d00cba190e5b78a89cf22b1c80ef16f17a MANIFEST
-SHA1 72ae110c9e02aafdeb87986983b778c2a01ca128 META.json
-SHA1 fca4ba24fb60f4938240a1182dee0823fca38346 META.yml
-SHA1 bc3e0c864b6ffeb798a1565fba118e8017a21673 Makefile.PL
-SHA1 3deac0c9e48299503445d5a1414002d421da1f50 README
+SHA1 4f5da0f7613749323860ec101735b0b7d02b1568 META.json
+SHA1 18dfec21e9652157bfe5d6ea3aafae60f8254512 META.yml
+SHA1 998dc727dc1bf3405d6e9d72a3d415e51c32d487 Makefile.PL
+SHA1 b813af62e22afa4fb319ccd2c3d0a7761d951b17 README
 SHA1 1dbfa6139c18bf1c8bdde442acbf0b3a7dcf1a80 dist.ini
-SHA1 72f2f5a1f1359285f9edd54f8b96ea43670c7c15 doap.ttl
-SHA1 1ae7c2cfef6f0d27ec7bac7c665becb6dd0be99c lib/Sub/Infix.pm
-SHA1 2cecb9bbd4c5c11144b2032e0e0011c87af07fea t/01basic.t
+SHA1 e348304289e0e1fd37c08d19df881b4ab6f75b84 doap.ttl
+SHA1 f95227c7bb0abab82d75c5b8df5526d39050ba9d lib/Sub/Infix.pm
+SHA1 c50e0177b23cc73b9898b1e2c0fe495f0f541188 t/01basic.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.14 (GNU/Linux)
+Version: GnuPG v1
 
-iEYEARECAAYFAlMU/JgACgkQzr+BKGoqfTmbUACdGNVRjgs2UyrxCXx9jZfKvqOS
-eqcAoJqhMWTPQAOoQml9WGx9fIobiVBk
-=R/v9
+iEYEARECAAYFAlO0AA0ACgkQzr+BKGoqfTnX9gCffFKaDkZR30aU6YUufj4B29JY
+QroAn3CLts80IZHenyFAChvbdDHHJTMq
+=LvmA
 -----END PGP SIGNATURE-----

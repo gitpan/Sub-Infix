@@ -7,7 +7,7 @@ my $meta = {
   "abstract"       => "create a fake infix operator",
   "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
   "dynamic_config" => 0,
-  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.014, CPAN::Meta::Converter version 2.120921",
+  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.016, CPAN::Meta::Converter version 2.140640",
   "keywords"       => [],
   "license"        => ["perl_5"],
   "meta-spec"      => {
@@ -18,21 +18,26 @@ my $meta = {
   "no_index"       => { directory => ["eg", "examples", "inc", "t", "xt"] },
   "prereqs"        => {
                         configure => { requires => { "ExtUtils::MakeMaker" => 6.17 } },
-                        test => { requires => { "Test::Fatal" => 0, "Test::More" => 0.96 } },
+                        runtime => { requires => { perl => 5.006 } },
+                        test => { requires => { "Test::Fatal" => 0, "Test::More" => 0.47 } },
                       },
   "provides"       => {
-                        "Sub::Infix" => { file => "lib/Sub/Infix.pm", version => 0.003 },
-                        "Sub::Infix::PartialApplication" => { file => "lib/Sub/Infix.pm", version => 0 },
+                        "Sub::Infix" => { file => "lib/Sub/Infix.pm", version => 0.004 },
+                        "Sub::Infix::PartialApplication" => { file => "lib/Sub/Infix.pm" },
                       },
   "release_status" => "stable",
   "resources"      => {
                         bugtracker   => { web => "http://rt.cpan.org/Dist/Display.html?Queue=Sub-Infix" },
                         homepage     => "https://metacpan.org/release/Sub-Infix",
                         license      => ["http://dev.perl.org/licenses/"],
-                        repository   => { type => "git", web => "https://github.com/tobyink/p5-sub-infix" },
+                        repository   => {
+                                          type => "git",
+                                          url  => "git://github.com/tobyink/p5-sub-infix.git",
+                                          web  => "https://github.com/tobyink/p5-sub-infix",
+                                        },
                         X_identifier => "http://purl.org/NET/cpan-uri/dist/Sub-Infix/project",
                       },
-  "version"        => 0.003,
+  "version"        => 0.004,
 };
 
 my %dynamic_config;
